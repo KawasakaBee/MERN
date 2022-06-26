@@ -1,0 +1,30 @@
+@import '../utils/variables';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: $font-color;
+}
+
+#root {
+    width: 100%;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: $background-color;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 1140px;
+    height: 100%;
+    padding: 150px 0;
+}

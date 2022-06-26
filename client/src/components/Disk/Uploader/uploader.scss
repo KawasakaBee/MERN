@@ -1,0 +1,39 @@
+@import '../../../utils/variables';
+
+.uploader {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: $font-color;
+    overflow-y: auto;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: 1.2rem;
+        color: $background-color;
+    }
+
+    &__close {
+        border: none;
+        color: $white-color;
+        background-color: transparent;
+        cursor: pointer;
+        transition: transform .3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__close {
+        padding: 3px;
+    }
+}

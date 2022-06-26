@@ -1,0 +1,17 @@
+@import './variables';
+
+@mixin button {
+    padding: 5px 10px;
+    border: solid 2px $font-color;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    transition-property: color, background;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        color: $white-color;
+        background-color: $font-color;
+    }
+}

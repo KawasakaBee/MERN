@@ -1,0 +1,41 @@
+@import '../../utils/variables';
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    padding: 30px 20px;
+    background-color: $white-color;
+
+    &__btn a {
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    &__logo {
+        margin-right: 10px;
+    }
+
+    &__header {
+        margin-right: 20px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__login {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    &__search {
+        max-width: 200px;
+    }
+}
+
+.container {
+    display: flex;
+    width: 1140px;
+    align-items: center;
+}

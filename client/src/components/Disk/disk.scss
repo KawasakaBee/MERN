@@ -1,0 +1,156 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+.disk {
+    width: 100%;
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__back {
+        @include button;
+        margin-left: auto;
+    }
+
+    &__create {
+        @include button;
+        margin-right: 10px;
+    }
+
+    &__upload {
+
+        &-input {
+            display: none;
+        }
+
+        &-label {
+            margin-right: 10px;
+            padding: 5px 10px;
+            border: 2px dotted $font-color;
+            cursor: pointer;
+        }
+    }
+
+    &__select {
+        padding: 5px 10px;
+        border: 2px solid $font-color;
+        border-radius: 12px;
+        background-color: transparent;
+    }
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $black-color-opacity;
+
+    .input {
+        margin-bottom: 10px;
+        padding: 10px 20px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        padding: 20px;
+        border-radius: 12px;
+        background-color: $white-color;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__close {
+        border: none;
+        background-color: transparent;
+        font-size: 24px;
+        transition: transform .3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__create {
+        @include button;
+        align-self: flex-end;
+    }
+}
+
+.drop-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 50px - 40px);
+    margin: 20px;
+    border: 2px dashed $font-color;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+
+    & div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border: 8px solid $font-color;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: $font-color transparent transparent transparent;
+
+        &:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+    }
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

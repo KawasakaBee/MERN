@@ -1,0 +1,6 @@
+{
+     "serverPort": 5000,
+     "dbUrl": "mongodb+srv://Nicropolis:btm2553ddask@cloud.almf2.mongodb.net/?retryWrites=true&w=majority",
+     "secretKey": "mern-secret-key",
+     "filePath": "C:\\Users\\abzae\\Desktop\\Cooding\\pets\\mern\\server\\files"
+}
